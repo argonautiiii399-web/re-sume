@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Tokyo Ghoul</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #0f0f0f;
+      color: #ffffff;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+      background-color: #1a1a1a;
+      cursor: pointer;
+    }
+
+    header img {
+      height: 80px;
+    }
+
+    header h1 {
+      font-size: 36px;
+    }
+
+    #info {
+      padding: 20px;
+      min-height: 180px;
+      text-align: center;
+    }
+
+    ul, ol, dl {
+      max-width: 600px;
+      margin: 10px auto;
+      text-align: left;
+    }
+
+    dt {
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    dd {
+      margin-left: 20px;
+      color: #cccccc;
+    }
+
+    .characters {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 20px;
+      background-color: #141414;
+    }
+
+    .character {
+      width: 140px;
+      text-align: center;
+      cursor: pointer;
+    }
+
+    .character img {
+      width: 100%;
+      border-radius: 10px;
+      border: 2px solid #444;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Шапка сайта -->
+<header onclick="showSeriesInfo()">
+  <img src="img/logo.webp" alt="Tokyo Ghoul">
+  <h1>Tokyo Ghoul</h1>
+</header>
+
+<!-- Блок информации -->
+<div id="info">
+  <p>Нажмите на логотип или персонажа, чтобы увидеть информацию.</p>
+</div>
+
+<!-- Персонажи -->
+<div class="characters">
+  <div class="character" onclick="showCharacter('kaneki')">
+    <img src="img/kaneki.webp">
+    <p>Кен Канэки</p>
+  </div>
+
+  <div class="character" onclick="showCharacter('touka')">
+    <img src="img/touka.webp">
+    <p>Тоука Киришима</p>
+  </div>
+
+  <div class="character" onclick="showCharacter('suzuya')">
+    <img src="img/suzuya.webp">
+    <p>Сузуя Джузо</p>
+  </div>
+
+  <div class="character" onclick="showCharacter('arima')">
+    <img src="img/arima.webp">
+    <p>Арима Кишо</p>
+  </div>
+
+  <div class="character" onclick="showCharacter('amon')">
+    <img src="img/amon.webp">
+    <p>Котаро Амон</p>
+  </div>
+
+  <div class="character" onclick="showCharacter('hinami')">
+    <img src="img/hinami.webp">
+    <p>Хинами Фуэгути</p>
+  </div>
+</div>
+
+<script>
+  /* Информация о сериале */
+  function showSeriesInfo() {
+    document.getElementById("info").innerHTML = `
+        <h2>О сериале</h2>
+
+        <ul>
+            <li>Жанр: тёмное фэнтези, психологический триллер</li>
+            <li>Автор: Суи Исида</li>
+            <li>Год выхода: 2014</li>
+            <li>Студия: Pierrot</li>
+        </ul>
+
+        <h3>Сезоны</h3>
+        <ol>
+            <li>Tokyo Ghoul</li>
+            <li>Tokyo Ghoul √A</li>
+            <li>Tokyo Ghoul:re</li>
+            <li>Tokyo Ghoul:re 2</li>
+        </ol>
+    `;
+  }
+
+  /* Информация о персонажах */
+  function showCharacter(name) {
+    let data = {
+      kaneki: {
+        title: "Кен Канэки",
+        info: `
+                <dl>
+                    <dt>Роль</dt>
+                    <dd>Главный герой</dd>
+
+                    <dt>Раса</dt>
+                    <dd>Полугуль</dd>
+
+                    <dt>Кагуне</dt>
+                    <dd>Ризе</dd>
+
+                    <dt>Характер</dt>
+                    <dd>Замкнутый, решительный</dd>
+                </dl>
+            `
+      },
+      touka: {
+        title: "Тоука Киришима",
+        info: `
+                <dl>
+                    <dt>Роль</dt>
+                    <dd>Сотрудница Антейку</dd>
+
+                    <dt>Раса</dt>
+                    <dd>Гуль</dd>
+
+                    <dt>Кагуне</dt>
+                    <dd>Укаку</dd>
+                </dl>
+            `
+      },
+      suzuya: {
+        title: "Сузуя Джузо",
+        info: `
+                <dl>
+                    <dt>Роль</dt>
+                    <dd>Следователь CCG</dd>
+
+                    <dt>Раса</dt>
+                    <dd>Человек</dd>
+
+                    <dt>Класс</dt>
+                    <dd>Особый</dd>
+
+                    <dt>Куинке</dt>
+                    <dd>Коса-Джейсон</dd>
+
+                    <dt>Прозвище</dt>
+                    <dd>Генерал-Дракон</dd>
+                </dl>
+            `
+      },
+      arima: {
+        title: "Арима Кишо",
+        info: `
+                <dl>
+                    <dt>Роль</dt>
+                    <dd>Следователь CCG</dd>
+
+                    <dt>Раса</dt>
+                    <dd>Человек</dd>
+
+                    <dt>Класс</dt>
+                    <dd>Особый</dd>
+
+                    <dt>Куинке</dt>
+                    <dd>Сова</dd>
+
+                    <dt>Прозвище</dt>
+                    <dd>Жнец CCG</dd>
+                </dl>
+            `
+      },
+      amon: {
+        title: "Котаро Амон",
+        info: `
+                <dl>
+                    <dt>Роль</dt>
+                    <dd>Следователь CCG</dd>
+
+                    <dt>Раса</dt>
+                    <dd>Человек</dd>
+
+                    <dt>Класс</dt>
+                    <dd>Особый</dd>
+
+                    <dt>Куинке</dt>
+                    <dd>Прототип Арата-2</dd>
+
+                    <dt>Прозвище</dt>
+                    <dd>Выпускник академии с отличием</dd>
+                </dl>
+            `
+      },
+      hinami: {
+        title: "Хинами Фуэгути",
+        info: `
+                <dl>
+                    <dt>Роль</dt>
+                    <dd>Молодая гулиха</dd>
+
+                    <dt>Особенность</dt>
+                    <dd>Добрая и ранимая</dd>
+                </dl>
+            `
+      }
+    };
+
+    document.getElementById("info").innerHTML = `
+        <h2>${data[name].title}</h2>
+        ${data[name].info}
+    `;
+  }
+</script>
+
+</body>
+</html>
