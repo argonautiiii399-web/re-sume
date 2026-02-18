@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Мои проекты</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #141e30, #243b55);
+      padding: 50px 20px;
+      color: white;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 50px;
+      font-size: 36px;
+    }
+
+    .projects {
+      max-width: 1000px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.1);
+      backdrop-filter: blur(10px);
+      padding: 25px;
+      border-radius: 15px;
+      transition: 0.4s;
+      border: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+    }
+
+    .card h2 {
+      margin-bottom: 15px;
+    }
+
+    .card p {
+      margin-bottom: 20px;
+      opacity: 0.9;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background: #6c63ff;
+      color: white;
+      text-decoration: none;
+      border-radius: 25px;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #4b47c2;
+    }
+
+    .back {
+      display: block;
+      text-align: center;
+      margin-top: 60px;
+      text-decoration: none;
+      color: white;
+      opacity: 0.8;
+    }
+
+    .back:hover {
+      opacity: 1;
+    }
+  </style>
+</head>
+
+<body>
+
+<h1>Мои проекты</h1>
+
+<div class="projects">
+
+  <div class="card">
+    <h2>GUL Project</h2>
+    <p>
+      Веб-приложение, разработанное на HTML, CSS и JavaScript.
+    </p>
+    <a href="ghoul.html" class="btn">Открыть</a>
+  </div>
+
+  <div class="card">
+    <h2>Другой проект</h2>
+    <p>
+      Описание второго проекта (можешь заменить).
+    </p>
+    <a href="#" class="btn">Подробнее</a>
+  </div>
+
+</div>
+
+<a href="index.html" class="back">← Назад к резюме</a>
+
+</body>
+</html>

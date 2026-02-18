@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Моё резюме</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #1e1e2f, #2c2c54);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      color: #333;
+    }
+
+    .container {
+      background: white;
+      width: 90%;
+      max-width: 900px;
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+      animation: fadeIn 1s ease;
+    }
+
+    h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    .role {
+      color: #6c63ff;
+      font-weight: 600;
+      margin-bottom: 30px;
+    }
+
+    section {
+      margin-bottom: 30px;
+    }
+
+    h2 {
+      margin-bottom: 15px;
+      border-left: 4px solid #6c63ff;
+      padding-left: 10px;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    ul li {
+      background: #f3f3f3;
+      padding: 10px 15px;
+      margin-bottom: 10px;
+      border-radius: 8px;
+      transition: 0.3s;
+    }
+
+    ul li:hover {
+      background: #6c63ff;
+      color: white;
+      transform: translateX(5px);
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 25px;
+      background: #6c63ff;
+      color: white;
+      text-decoration: none;
+      border-radius: 30px;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #4b47c2;
+      transform: scale(1.05);
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 25px;
+      }
+      h1 {
+        font-size: 28px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="container">
+  <h1>Lyan Andrey</h1>
+  <div class="role">Frontend,BackEnd Developer, 3D Desingner, DataBase Manager</div>
+
+  <section>
+    <h2>Обо мне</h2>
+    <p>
+Учусь в алматинском государственном политехническом колледже разрабатываю веб-приложения и занимаюсь 3д моделированием
+    </p>
+  </section>
+
+  <section>
+    <h2>Skills</h2>
+    <ul>
+      <li>HTML5 / CSS3</li>
+      <li>JavaScript</li>
+      <li>Git / GitHub</li>
+      <li>3D Design(Blender)</li>
+      <li>C# Develop</li>
+      <li>DataBase(MySQL)</li>
+    </ul>
+  </section>
+
+  <a href="projects.html" class="btn">Look on projects</a>
+</div>
+
+</body>
+</html>
